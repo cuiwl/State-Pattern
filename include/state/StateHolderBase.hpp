@@ -35,7 +35,7 @@ class StateHolderBase : public Logging_
       {
          if (!started()) 
          {
-            logStart(&initialState);
+            Logging_::logStart(&initialState);
             mpState = &initialState;
             mpState->enter();
          }
@@ -54,7 +54,7 @@ class StateHolderBase : public Logging_
       void setState(StateType& newState) 
       {
          if (started()) {
-            logStateChange(mpState, &newState);
+            Logging_::logStateChange(mpState, &newState);
 
             StateType* oldState = mpState;
             mpState = &newState;

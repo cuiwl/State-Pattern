@@ -11,19 +11,6 @@ struct EmptyStateHolderLogging
    void logStateChange(void* from, void* to) { }
 };
 
-// template <typename State_, 
-//           typename SubClass_>
-// struct SubClassLogging
-// {
-//    void logStart(State_* initialState) {
-//       static_cast<SubClass_*>(this)->logInitialState(*initialState);
-//    }
-// 
-//    void logStateChange(State_* from, State_* to) {
-//       static_cast<SubClass_*>(this)->logChangeState(*from, *to);
-//    }
-// };
-
 struct DefaultLoggingBase 
 {
    static
